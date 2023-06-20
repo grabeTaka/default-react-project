@@ -21,3 +21,9 @@ function App() {
 }
 
 export default App;
+
+
+// eslint
+// husky
+// Componentizar header
+// context

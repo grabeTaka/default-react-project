@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
@@ -19,7 +19,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
-import { linksRoutes, linksRoutesTypes } from '../../constants/linksRoutes';
+import { linksRoutes, type linksRoutesTypes } from '../../constants/linksRoutes';
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link

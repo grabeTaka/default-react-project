@@ -13,4 +13,4 @@ export const linksRoutes = [
 	},
 ]
 
-export type linksRoutesTypes = {value: string, name: string}
+export interface linksRoutesTypes {value: string, name: string}
