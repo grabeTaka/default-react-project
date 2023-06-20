@@ -20,6 +20,7 @@
     "cypress-file-upload": "^5.0.8",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "framer-motion": "^10.12.16",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",
@@ -67,11 +68,11 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
-    "husky": ">=7",
     "lint-staged": "^13.2.2",
     "prettier": "2.8.8"
   },
   "lint-staged": {
-    "*.--write": "prettier --write"
+    "*.ts*": "eslint --fix ",
+    "*.{ts*,css,md,html,json}": "prettier --cache --write"
   }
 }
