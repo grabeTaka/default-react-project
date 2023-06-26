@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react'
-import { ITodo, TodoContextType } from '../../types/todoContext/index'
+import { ITodo, TodoContextType } from 'types/todoContext/index'
 import { todoContextProps } from './index.d'
 
 export const TodoContext = React.createContext<TodoContextType | null>(null)
