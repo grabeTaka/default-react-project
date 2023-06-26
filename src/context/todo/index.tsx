@@ -1,11 +1,11 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react'
 import { ITodo, TodoContextType } from '../../types/todoContext/index'
+import { todoContextProps } from './index.d'
 
 export const TodoContext = React.createContext<TodoContextType | null>(null)
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const TodoProvider: React.FC<React.ReactNode> = ({ children }: any) => {
+const TodoProvider: React.FC<todoContextProps> = ({ children }) => {
     const [todos, setTodos] = React.useState<ITodo[]>([
         {
             id: 1,
