@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/home/index'
 import Maps from './components/maps/index'
-import Table from './components/table/index'
+import Informations from './pages/Informations/index'
 import Header from './components/header/index'
 import React from 'react'
 
@@ -15,7 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/" Component={Home} />
                     <Route path="/maps" Component={Maps} />
-                    <Route path="/table" Component={Table} />
+                    <Route path="/informations" Component={Informations} />
                 </Routes>
             </ChakraProvider>
         </Router>

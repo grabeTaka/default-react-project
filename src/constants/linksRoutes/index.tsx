@@ -4,8 +4,8 @@ export const linksRoutes = [
         name: 'Home',
     },
     {
-        value: '/table',
-        name: 'Table',
+        value: '/informations',
+        name: 'Informations',
     },
     {
         value: '/maps',
