@@ -24,6 +24,7 @@ const TodoProvider: React.FC<todoContextProps> = ({ children }) => {
     // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
     const updateTodo = (id: number) => {
         setTodos([])
+        console.info(todos)
         console.info('Todo function')
     }
 
