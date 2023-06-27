@@ -8,8 +8,6 @@ const Table: React.FC = () => {
 
     useEffect(() => {
     // eslint-disable-next-line no-console
-        console.log('00000')
-        // eslint-disable-next-line no-console
         console.log(todos)
     }, [todos])
 
