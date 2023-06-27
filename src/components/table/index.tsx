@@ -11,7 +11,7 @@ const Table: React.FC = () => {
         console.log(todos)
     }, [todos])
 
-    return <div> informations </div>
+    return <div> Testamdp </div>
 }
 
 export default Table
