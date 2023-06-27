@@ -7,7 +7,6 @@ const Table: React.FC = () => {
     const { todos } = React.useContext(TodoContext) as TodoContextType
 
     useEffect(() => {
-    // eslint-disable-next-line no-console
         console.log(todos)
     }, [todos])
 
