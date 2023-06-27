@@ -32,11 +32,6 @@ const TodoProvider: React.FC<todoContextProps> = ({ children }) => {
         console.info('ToDo function')
     }
 
-    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-    const getSomeThing = () => {
-        return 0
-    }
-
     return (
         <TodoContext.Provider value={{ todos, saveTodo, updateTodo }}>
             {children}
