@@ -4,7 +4,7 @@ class Table extends Component {
     render() {
         return (
             <div>
-                <h2>Table</h2>
+                <h2>Tables</h2>
             </div>
         )
     }
