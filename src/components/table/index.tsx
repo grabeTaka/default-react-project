@@ -11,9 +11,12 @@ import {
     Thead,
     Tr,
 } from '@chakra-ui/react'
+import { useTodoEditModal } from 'hooks/use-modal'
 
 const TableComponent: React.FC = () => {
     const { todos = [] } = useTodo()
+    const { openEditDataModal } = useTodoEditModal()
+
     return (
         <Flex direction="column" width="100%">
             <TableContainer mt={6}>
@@ -31,7 +34,9 @@ const TableComponent: React.FC = () => {
                                 <Td fontWeight="bold">{todo.title}</Td>
                                 <Td>{todo.description}</Td>
                                 <Td>
-                                    {todo.status}
+                                    {todo.status &&
+                                        <span onClick={() => openEditDataModal(todo)}> Config </span>
+                                    }
                                 </Td>
                             </Tr>
                         ))}
