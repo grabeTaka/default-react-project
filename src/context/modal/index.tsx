@@ -1,5 +1,7 @@
 import { EditDataModalProvider } from './edit-data-modal'
+import { ConfirmDeleteModalProvider } from './confirm-delete-modal'
 export * from './edit-data-modal'
+export * from './confirm-delete-modal'
 
 interface ModalProviderProps {
     children: React.ReactNode
@@ -7,7 +9,9 @@ interface ModalProviderProps {
 export const ModalProvider = ({children}: ModalProviderProps) => {
     return (
         <EditDataModalProvider>
-            {children}
+            <ConfirmDeleteModalProvider>
+                {children}
+            </ConfirmDeleteModalProvider>
         </EditDataModalProvider>
     )
 }
