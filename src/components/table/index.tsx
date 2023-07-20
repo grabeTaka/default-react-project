@@ -11,11 +11,15 @@ import {
     Thead,
     Tr,
 } from '@chakra-ui/react'
-import { useTodoEditModal } from 'hooks/use-modal'
+import { EditIcon, DeleteIcon } from '@chakra-ui/icons'
+
+import { useTodoEditModal } from 'hooks/use-modal/use-table-modal'
+import { useConfirmDeleteModal } from 'hooks/use-modal/use-confirm-delete-modal'
 
 const TableComponent: React.FC = () => {
     const { todos = [] } = useTodo()
     const { openEditDataModal } = useTodoEditModal()
+    const { openConfirmDeleteModal } = useConfirmDeleteModal()
 
     return (
         <Flex direction="column" width="100%">
@@ -26,6 +30,7 @@ const TableComponent: React.FC = () => {
                             <Th>Título</Th>
                             <Th>Descrição</Th>
                             <Th>Status</Th>
+                            <Th>Excluir</Th>
                         </Tr>
                     </Thead>
                     <Tbody>
@@ -35,9 +40,13 @@ const TableComponent: React.FC = () => {
                                 <Td>{todo.description}</Td>
                                 <Td>
                                     {todo.status &&
-                                        <span onClick={() => openEditDataModal(todo)}> Config </span>
+                                        <EditIcon onClick={() => openEditDataModal(todo)} cursor={'pointer'}/>
                                     }
                                 </Td>
+                                <Td>
+                                    <DeleteIcon onClick={() => openConfirmDeleteModal(todo.id)} cursor={'pointer'}/>
+                                </Td>
+
                             </Tr>
                         ))}
                     </Tbody>
